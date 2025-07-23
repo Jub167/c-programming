@@ -1,23 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+int main()
+{
+    int a,b,c,greatest;
 
-    float P,R,T,SI;
+    printf("ENTER THREE NUMBER: \n");
+    scanf("%d %d %d" , &a,&b,&c);
 
-    printf("ENTER PRINCIPLE AMOUNT: \n");
-    scanf("%f" , &P);
+    greatest = (a > b && a > c)? a: ((b > c) ? b:c);
 
-    printf("ENTER RATE OF INTEREST: \n");
-    scanf("%f" , &R);
-
-    printf("ENTER PERIOD OF TIME (IN YEARS): \n");
-    scanf("%f" , &T);
-
-    SI = (P*R*T) / 100;
-
-    printf("SIMPLE INTREST = %.2f \n" ,SI);
+    printf("greatest number is = %d \n" ,greatest);
 
     return 0;
 }
+
+
+
 
