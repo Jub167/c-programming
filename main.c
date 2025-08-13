@@ -3,18 +3,18 @@
 
 int main()
 {
-    int a,b,c,greatest;
+    int num;
 
-    printf("ENTER THREE NUMBER: \n");
-    scanf("%d %d %d" , &a,&b,&c);
+    printf("enter a number: ");
+    scanf("%d", &num);
 
-    greatest = (a > b && a > c)? a: ((b > c) ? b:c);
+    if (num < 0)
+        goto error;
 
-    printf("greatest number is = %d \n" ,greatest);
+    printf("you entered a valid number: %d\n", num);
+        return 0;
 
-    return 0;
+        error:
+            printf("error: negative number not allowed.\n");
+            return 1;
 }
-
-
-
-
